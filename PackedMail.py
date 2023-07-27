@@ -68,7 +68,7 @@ class PackedMail:
         with open(path, 'rb') as f:
             if not f.name.endswith('.eml'):
                 raise Exception(f"unexpected file format \"{f.name.split('.')[1]}\" in the zip file.")
-            self.file_name = f.name.split('/')[-1] if '/' in f.name else f.name
+            self.file_name = f.name.split('\/')[-1] if '\/' in f.name else f.name
             msg = email.message_from_binary_file(f)
         plain_part = find_plain_part(msg)
         try:
