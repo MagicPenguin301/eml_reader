@@ -4,6 +4,7 @@ import email
 import email.utils
 from email.header import decode_header
 import pytz
+import os
 
 from TextAnalyzer import TextAnalyzer
 from TextRefiner import TextRefiner
